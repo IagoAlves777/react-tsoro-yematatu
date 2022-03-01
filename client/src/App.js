@@ -123,7 +123,7 @@ function App() {
     });
   }
 
-  function changeColor(point) {
+  function changeColor(point){
     const oldPoint = {
       colorPoint: "black",
       point: point.ponto.point,
@@ -261,9 +261,13 @@ function App() {
   }, [socket]);
 
   useEffect(() => {
-    socket.on("recuseDraw", (data) => {
+    function recuseDraw(){
       setShowDraw(false);
-    });
+      setLoading(false);
+    }
+    const handleRecuse = recuse => recuseDraw();
+    socket.on('recuseDraw', handleRecuse);
+    return () => socket.off('recuseDraw', handleRecuse);
   }, [showDraw]);
 
   useEffect(() => {
@@ -294,6 +298,12 @@ function App() {
       setColorWinner("primary");
     });
   }, [showWinner]);
+  
+  let colorWin;
+  if(colorWinner === 'danger')
+    colorWin = 'RED'
+  if(colorWinner === 'primary')
+    colorWin = 'BLUE'
 
   return (
     <Routes>
@@ -303,7 +313,7 @@ function App() {
           <div className="div_game">
             <Modal show={showWinner} onHide={handleCloseW} centered={true}>
               <Modal.Header closeButton>
-                <Modal.Title>{color.toLocaleUpperCase()} Win!</Modal.Title>
+                <Modal.Title>{colorWin} Win!</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 With a better strategy and impeccable reasoning {nick} won
