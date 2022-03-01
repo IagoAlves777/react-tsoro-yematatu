@@ -1,0 +1,9 @@
+.div_tie{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img{
+  padding-bottom: 30px;
+}

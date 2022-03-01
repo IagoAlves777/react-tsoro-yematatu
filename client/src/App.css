@@ -1,0 +1,39 @@
+.Menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.modal-footer{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-close{
+  display: none;
+}
+
+.div_game{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.div_topGame{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 90vh;
+}
+
+.div_bottomGame{
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+  margin-top: 10px;
+  width: 56vh;
+}
