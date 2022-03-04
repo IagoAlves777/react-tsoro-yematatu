@@ -5,7 +5,7 @@ function Chat(
   {
     messages,
     handleFormSubmit,
-    myId,
+    color
   }
 ){
   const [message, updateMessage] = useState("");
@@ -24,13 +24,13 @@ function Chat(
             {messages.map((m, index) => (
               <li
                 className={`list__item list__item--${
-                  m.color === 'red' ? "mine" : "other"
+                  m.color === color ? "mine" : "other"
                 }`}
                 key={index}
               >
                 <span
                   className={`message message--${
-                    m.color === 'red' ? "mine" : "other"
+                    m.color === color ? "mine" : "other"
                   }`}
                 >
                   {m.message}

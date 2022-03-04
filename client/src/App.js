@@ -383,7 +383,7 @@ function App() {
                 messages={messages}
                 updateMessages={updateMessages}
                 handleFormSubmit={handleFormSubmit}
-                myId={myId}
+                color={color}
               />
             </div>
           </div>
