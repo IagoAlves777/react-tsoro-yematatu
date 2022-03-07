@@ -2,7 +2,7 @@
 Trabalho da cadeira de programação paralela e distrubuida no qual foi implementado o jogo tsoro yematatu um jogo africano similar ao jogo da velha.
 
 # Como rodar o projeto?
-Para rodar o servidor é nessessario ter o node instalado, o projeto é divido em 2 partes, servidor e cliente. Ao baixar o projeto é necessário instalar as dependências de ambas as partes.
+Para rodar o projeto é nessessario ter o node instalado, o projeto é divido em 2 partes, servidor e cliente. Ao baixar o projeto é necessário instalar as dependências de ambas as partes.
 Para isso basta abrir cada uma deles no prompt de comando e executar o comando "npm install".
 Após ter as dependências instaladas basta executar o comando "npm start" tanto no servidor quanto no cliente para rodar a aplicação.
 É necessário abrir abrir o localhost:3000 em 2 navegadores diferentes pra que possa se conectar como 2 players diferentes.
